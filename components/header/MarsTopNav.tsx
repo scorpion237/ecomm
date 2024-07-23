@@ -4,6 +4,8 @@ import {faPhoneAlt} from '@fortawesome/free-solid-svg-icons/faPhoneAlt';
 import {faShippingFast} from '@fortawesome/free-solid-svg-icons/faShippingFast';
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { IconProp } from '@fortawesome/fontawesome-svg-core'; // Importez IconProp
+
 import Link from 'next/link';
 
 export default function MarsTopNav() {
@@ -17,7 +19,7 @@ export default function MarsTopNav() {
 					/>
 					<Contact href={'https://api.whatsapp.com/send?phone=10001234567&text=hello'}
 									 label={'+237 693-196-576'}
-									 icon={<FontAwesomeIcon icon={faWhatsapp} />}
+									 icon={<FontAwesomeIcon icon={faWhatsapp as IconProp} />}
 					/>
 				</div>
 				<div className={'mars-top-nav__note'}>

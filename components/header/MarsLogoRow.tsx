@@ -8,6 +8,8 @@ import clsx from 'clsx';
 import {RootState} from '../../redux/store';
 import {faShoppingCart} from '@fortawesome/free-solid-svg-icons/faShoppingCart';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { IconProp } from '@fortawesome/fontawesome-svg-core'; // Importez IconProp
+
 
 export default function MarsLogoRow() {
 	const dispatch = useAppDispatch();
@@ -31,7 +33,7 @@ export default function MarsLogoRow() {
 				Bienvenue dans notre boutique. Nous travaillons pour vous !
 				</div>
 				<div className={'mars-logo-row__at-right'}>
-					<HeaderCart icon={<span className={'mars-logo-row__cart-icon'}><FontAwesomeIcon icon={faShoppingCart} /></span>}/>
+					<HeaderCart icon={<span className={'mars-logo-row__cart-icon'}><FontAwesomeIcon icon={faShoppingCart as IconProp} /></span>}/>
 					<button type={'button'}
 									className={'hamburger-btn mars-logo-row__hamburger'}
 									onClick={onHamburgerBtnClicked}
